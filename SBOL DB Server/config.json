@@ -1,0 +1,12 @@
+{
+	"databasetype":"sqlite",
+	"databasename":"sbol.db",
+	"databasehost":"localhost",
+	"databaseusername":"sbol",
+	"databasepassword":"sbol",
+	"databaseport":3306,
+	"serverport":7946,
+	"webserver":true,
+	"webserverport":8080,
+	"logpath":".\\log"
+}

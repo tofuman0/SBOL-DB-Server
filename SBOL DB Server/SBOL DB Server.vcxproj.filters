@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SBOL DB Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLite\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\ClientAuthPackets.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\ClientOperationsPackets.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\ClientRequestsPackets.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\ServerAuthPackets.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\ServerOperationsPackets.cpp">
+      <Filter>Source Files\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="serverpacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="packets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="serverpacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SBOL DB Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3d173cba-d117-4838-9acc-c78237ec4076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ea28a22c-004b-4b17-b6ba-a955864386ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Packets">
+      <UniqueIdentifier>{6842776e-42d3-4e26-babe-2f011b99e3c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{1f8dbd94-0ac6-4bad-b475-125a51415b40}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SBOL DB Server.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Genki.ico">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
