@@ -110,7 +110,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>libmysql.lib;ws2_32.lib;libcrypto.lib;libssl.lib;Crypt32.lib;GDI32.LIB;ADVAPI32.LIB;USER32.LIB;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcrypto.lib;libmysql.lib;ws2_32.lib;libssl.lib;Crypt32.lib;GDI32.LIB;ADVAPI32.LIB;USER32.LIB;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -152,7 +152,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>libmysql.lib;ws2_32.lib;libcrypto.lib;libssl.lib;Crypt32.lib;GDI32.LIB;ADVAPI32.LIB;USER32.LIB;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcrypto.lib;libmysql.lib;ws2_32.lib;libssl.lib;Crypt32.lib;GDI32.LIB;ADVAPI32.LIB;USER32.LIB;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
       <GenerateDebugInformation>false</GenerateDebugInformation>
