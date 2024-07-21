@@ -114,6 +114,14 @@
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)csp_crypt.dll" "$(OutDir)" /b /y
+copy "$(ProjectDir)libmysql.dll"  "$(OutDir)" /b /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -157,6 +165,14 @@
       </EntryPointSymbol>
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)csp_crypt.dll" "$(OutDir)" /b /y
+copy "$(ProjectDir)libmysql.dll"  "$(OutDir)" /b /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>

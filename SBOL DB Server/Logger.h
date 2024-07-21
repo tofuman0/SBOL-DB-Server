@@ -1,7 +1,7 @@
 #pragma once
 #include "globals.h"
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
 #include <stdio.h>
@@ -21,6 +21,7 @@ public:
 	std::wstring ToWide(std::string in);
 	std::string ToNarrow(std::wstring in);
 private:
+	void CheckLogPath(std::string path);
 	bool isService;
 	std::string logpath;
 };

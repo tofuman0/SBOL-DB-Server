@@ -7,12 +7,14 @@ Logger::Logger(bool type)
 {
 	logpath = ".\\log";
 	isService = type;
+	CheckLogPath(logpath);
 }
 
 Logger::Logger(char* path, bool type)
 {
 	logpath = path;
 	isService = type;
+	CheckLogPath(logpath);
 }
 
 Logger::~Logger()
@@ -21,14 +23,13 @@ Logger::~Logger()
 
 void Logger::Log(LOGTYPE type, const wchar_t* in, ...)
 {
-	// TODO: Log string based on service or console app.
 	bool isDebug = false;
 #ifdef _DEBUG
 	isDebug = true;
 #endif
 	va_list args;
 	wchar_t text[MAX_MESG_LEN];
-	wchar_t logbuf[FILENAME_MAX];
+	wchar_t logbuf[MAX_MESG_LEN];
 	wchar_t buf[MAX_MESG_LEN];
 
 	SYSTEMTIME rawtime;
@@ -77,11 +78,13 @@ std::string Logger::ToNarrow(std::wstring in)
 void Logger::LogPath(char* in)
 {
 	logpath = in;
+	CheckLogPath(logpath);
 }
 
 void Logger::LogPath(std::string& in)
 {
 	logpath = in;
+	CheckLogPath(logpath);
 }
 
 std::string Logger::LogPath()
@@ -147,4 +150,17 @@ std::wstring Logger::PacketToText(uint8_t* buf, uint32_t len)
 	}
 	catch (std::exception ex) {}
 	return std::wstring();
+}
+
+void Logger::CheckLogPath(std::string path)
+{
+	struct stat sb;
+	if (stat(path.c_str(), &sb) != 0)
+	{
+		std::cout << "Log path " << path.c_str() << " doesn't exist. Creating path" << std::endl;
+		if (!CreateDirectoryA(path.c_str(), NULL))
+		{
+			std::cout << "Error creating log folder " << path.c_str() << std::endl;
+		}
+	}
 }

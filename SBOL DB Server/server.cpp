@@ -283,6 +283,19 @@ int32_t Server::LoadConfig(const wchar_t* filename)
 	bool malformed = false;
 	std::wstring error = L"";
 	std::ifstream inFile(filename);
+	if (inFile.fail())
+	{
+		logger->Log(LOGTYPE_ERROR, L"Configuration file missing: %s. Default config is being created.", filename);
+		std::ofstream outfile(filename);
+		if (outfile.fail())
+		{
+			logger->Log(LOGTYPE_ERROR, L"Failure to create default configuration file: %s.", filename);
+			return 1;
+		}
+		outfile << DEFAULT_JSON_CONFIG;
+		outfile.close();
+		inFile.open(filename);
+	}
 	if (!inFile.is_open())
 	{
 		logger->Log(LOGTYPE_ERROR, L"Error Loading configuration file: %s.", filename);

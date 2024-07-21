@@ -65,6 +65,7 @@ private:
 	bool isService;
 	char hexStr[(MAX_MESG_LEN + 1) * 2];
 	const wchar_t* CONFIG_FILENAME = L"config.json";
+	const char* DEFAULT_JSON_CONFIG = "{\n\t\"databasetype\":\"sqlite\",\n\t\"databasename\":\"sbol.db\",\n\t\"databasehost\":\"localhost\",\n\t\"databaseusername\":\"sbol\",\n\t\"databasepassword\":\"sbol\",\n\t\"databaseport\":3306,\n\t\"serverport\":7946,\n\t\"webserver\":true,\n\t\"webserverport\":8080,\n\t\"logpath\":\".\\\\log\"\n}";
 	uint32_t databasetype;
 	std::string databaseusername;
 	std::string databasepassword;

@@ -74,6 +74,10 @@ int wmain(int argc, wchar_t *argv[])
 				delete server;
 				return 1;
 			}
+			else
+			{
+				server->logger->Log(LOGTYPE_SERVER, L"Created new key and added to database");
+			}
 			delete server;
 		}
 		else if ((_wcsicmp(L"?", argv[1] + 1) == 0) || (_wcsicmp(L"help", argv[1] + 1) == 0))
@@ -112,6 +116,7 @@ int wmain(int argc, wchar_t *argv[])
 			std::this_thread::sleep_for(std::chrono::milliseconds(1));
 		}
 		server->CloseDB();
+		server->logger->Log(LOGTYPE_SERVER, L"DB Server shutting down");
 		delete server;
 	}
     return 0;
