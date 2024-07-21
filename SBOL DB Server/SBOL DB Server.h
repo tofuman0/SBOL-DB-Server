@@ -35,10 +35,10 @@ const char* HASH_SECRET = "GENKIWHYYOUDOTHIS?";
 
 void DisplayHelp()
 {
-	std::cout << L"Parameters:" << std::endl;
-	std::cout << L" -setpassword      to set the password of an existing account." << std::endl;
-	std::cout << L" -createaccount    to create an account." << std::endl;
-	std::cout << L" -createkey	     to create a server key." << std::endl;
+	std::wcout << L"Parameters:" << std::endl;
+	std::wcout << L" -setpassword      to set the password of an existing account." << std::endl;
+	std::wcout << L" -createaccount    to create an account." << std::endl;
+	std::wcout << L" -createkey        to create a server key." << std::endl;
 }
 
 void ChangeIcon(const HICON hNewIcon)

@@ -90,4 +90,7 @@
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="config1.bin" />
+  </ItemGroup>
 </Project>

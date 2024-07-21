@@ -15,9 +15,9 @@ int wmain(int argc, wchar_t *argv[])
 		{
 			if (argc != 4)
 			{
-				std::cout << L"setpassword Parameters:" << std::endl;
-				std::cout << L" username          username to update the password of." << std::endl;
-				std::cout << L" password          password to set." << std::endl;
+				std::wcout << L"setpassword Parameters:" << std::endl;
+				std::wcout << L" username          username to update the password of." << std::endl;
+				std::wcout << L" password          password to set." << std::endl;
 			}
 			else
 			{
@@ -41,11 +41,11 @@ int wmain(int argc, wchar_t *argv[])
 		{
 			if (argc != 6)
 			{
-				std::cout << L"createaccount Parameters:" << std::endl;
-				std::cout << L" username          username to create." << std::endl;
-				std::cout << L" password          password to set." << std::endl;
-				std::cout << L" email             email to set." << std::endl;
-				std::cout << L" privileges        account privileges to set (255 full admin)." << std::endl;
+				std::wcout << L"createaccount Parameters:" << std::endl;
+				std::wcout << L" username          username to create." << std::endl;
+				std::wcout << L" password          password to set." << std::endl;
+				std::wcout << L" email             email to set." << std::endl;
+				std::wcout << L" privileges        account privileges to set (255 full admin)." << std::endl;
 			}
 			else
 			{
