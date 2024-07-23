@@ -20,7 +20,7 @@ Server::Server(bool type)
 	ServerSocket = -1;
 	TempSocket = -1;
 	serverClientLimit = 10;
-	logger = new Logger(type);
+	logger = new Logger();
 }
 Server::~Server()
 {

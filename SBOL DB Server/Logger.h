@@ -9,8 +9,8 @@
 class Logger
 {
 public:
-	Logger(bool type = false);
-	Logger(char* path, bool type = false);
+	Logger();
+	Logger(char* path);
 	~Logger();
 	void Log(LOGTYPE type, const wchar_t* in, ...);
 	std::string LogPath();
@@ -22,6 +22,5 @@ public:
 	std::string ToNarrow(std::wstring in);
 private:
 	void CheckLogPath(std::string path);
-	bool isService;
 	std::string logpath;
 };

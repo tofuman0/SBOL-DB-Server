@@ -3,17 +3,15 @@
 #include <iomanip>
 #include "Logger.h"
 
-Logger::Logger(bool type)
+Logger::Logger()
 {
 	logpath = ".\\log";
-	isService = type;
 	CheckLogPath(logpath);
 }
 
-Logger::Logger(char* path, bool type)
+Logger::Logger(char* path)
 {
 	logpath = path;
-	isService = type;
 	CheckLogPath(logpath);
 }
 
@@ -42,8 +40,7 @@ void Logger::Log(LOGTYPE type, const wchar_t* in, ...)
 	wcscat_s(text, L"\n");
 	swprintf(&buf[0], MAX_MESG_LEN, L"[%02u-%02u-%u, %02u:%02u:%02u] %s", rawtime.wMonth, rawtime.wDay, rawtime.wYear, rawtime.wHour, rawtime.wMinute, rawtime.wSecond, text);
 	
-	if (isService == false)
-		wprintf(buf);
+	wprintf(buf);
 
 	if ((type == LOGTYPE_DATABASE || type == LOGTYPE_ERROR || type == LOGTYPE_PACKET || type == LOGTYPE_SERVER || (type == LOGTYPE_DEBUG && isDebug)) && logpath.length() > 0)
 	{
